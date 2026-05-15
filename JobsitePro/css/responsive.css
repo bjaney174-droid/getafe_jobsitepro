@@ -1,0 +1,1330 @@
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* ========== TABLETS (768px and below) ========== */
+@media (max-width: 768px) {
+    /* Base */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Navbar */
+    .navbar .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-logo {
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-menu a,
+    .nav-menu button {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        order: 2;
+    }
+
+    .nav-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: all 0.3s;
+    }
+
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-user {
+        width: 100%;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .btn-large {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .btn-sm {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 40px 20px;
+        border-radius: 4px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .search-form input {
+        font-size: 14px;
+    }
+
+    /* Jobs Section */
+    .jobs-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sidebar-filters {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: white;
+        z-index: 999;
+        overflow-y: auto;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+        padding: 20px;
+    }
+
+    .sidebar-filters.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar-filters::before {
+        content: "×";
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
+        cursor: pointer;
+        color: #666;
+    }
+
+    /* Job Cards */
+    .job-card {
+        padding: 15px;
+    }
+
+    .job-card h3 {
+        font-size: 16px;
+    }
+
+    .job-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .company-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .company-logo-placeholder {
+        width: 40px;
+        height: 40px;
+    }
+
+    .job-tags {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    .job-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Forms */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .form-group textarea {
+        min-height: 80px;
+    }
+
+    /* Auth Pages */
+    .auth-container {
+        min-height: calc(100vh - 150px);
+        padding: 20px;
+    }
+
+    .auth-box {
+        padding: 25px;
+        max-width: 100%;
+    }
+
+    .auth-box h2 {
+        font-size: 22px;
+    }
+
+    /* Job Detail */
+    .job-detail-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .job-detail-main {
+        padding: 20px;
+    }
+
+    .job-detail-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .job-detail-title {
+        flex-direction: column;
+    }
+
+    .detail-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .detail-logo-placeholder {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .job-detail-title h1 {
+        font-size: 24px;
+    }
+
+    .job-meta-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .meta-box {
+        padding: 12px;
+    }
+
+    .meta-box small {
+        font-size: 11px;
+    }
+
+    .meta-box p {
+        font-size: 13px;
+    }
+
+    /* Post Job */
+    .post-job-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .job-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    fieldset {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    legend {
+        font-size: 14px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-actions button,
+    .form-actions a {
+        width: 100%;
+        flex: none;
+    }
+
+    /* My Jobs */
+    .my-jobs-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .my-jobs-header a {
+        width: 100%;
+    }
+
+    .job-management-card {
+        padding: 15px;
+    }
+
+    .job-management-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .stat-value {
+        font-size: 20px;
+    }
+
+    .job-management-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .job-management-actions .btn {
+        width: 100%;
+        padding: 8px;
+    }
+
+    /* My Applications */
+    .application-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .app-header h3 {
+        font-size: 16px;
+    }
+
+    .app-details {
+        text-align: center;
+    }
+
+    .app-footer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* Profile */
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .profile-actions a {
+        width: 100%;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-sections {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-section {
+        padding: 15px;
+    }
+
+    /* Edit Profile */
+    .edit-profile-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .avatar-upload {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avatar-preview {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Contact Page */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-form-section {
+        padding: 20px;
+    }
+
+    .contact-info-section h3 {
+        margin-top: 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Admin Panel */
+    .admin-dashboard h1 {
+        font-size: 24px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .stat-card {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stat-icon {
+        font-size: 28px;
+    }
+
+    .admin-links {
+        flex-direction: column;
+    }
+
+    .admin-links a {
+        width: 100%;
+    }
+
+    .admin-table {
+        font-size: 12px;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: 8px;
+    }
+
+    .admin-table .btn {
+        margin-bottom: 5px;
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* Pagination */
+    .pagination {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .pagination .btn {
+        min-width: 35px;
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    /* Filter Buttons */
+    .filter-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .filter-buttons .btn {
+        flex: 1;
+        min-width: 80px;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Dropdowns */
+    .dropdown {
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Notifications */
+    .alert {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+
+    /* Tables */
+    .admin-table {
+        overflow-x: auto;
+        display: block;
+    }
+
+    .admin-table thead {
+        display: none;
+    }
+
+    .admin-table tbody,
+    .admin-table tr,
+    .admin-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .admin-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 0;
+    }
+
+    .admin-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid #eee;
+    }
+
+    .admin-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        font-weight: bold;
+        text-align: left;
+        width: 40%;
+    }
+
+    /* No Results */
+    .no-results {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .no-results p {
+        font-size: 14px;
+    }
+
+    /* Logout Confirm */
+    .logout-confirm {
+        min-height: calc(100vh - 150px);
+    }
+
+    .logout-box {
+        padding: 25px;
+        max-width: 90%;
+    }
+
+    .logout-buttons {
+        flex-direction: column;
+    }
+
+    .logout-buttons a {
+        width: 100%;
+    }
+}
+
+/* ========== SMALL PHONES (480px and below) ========== */
+@media (max-width: 480px) {
+    /* Base */
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Navbar */
+    .nav-logo {
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        gap: 8px;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .btn-large {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 30px 15px;
+        margin: 20px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 22px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Forms */
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Auth Box */
+    .auth-box {
+        padding: 20px;
+        border-radius: 4px;
+    }
+
+    .auth-box h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    /* Job Card */
+    .job-card {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    .job-card h3 {
+        font-size: 15px;
+    }
+
+    .company-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .company-logo-placeholder {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .job-description {
+        font-size: 12px;
+    }
+
+    .tag {
+        padding: 3px 6px;
+        font-size: 10px;
+    }
+
+    /* Job Detail */
+    .job-detail-main {
+        padding: 15px;
+    }
+
+    .job-detail-title h1 {
+        font-size: 20px;
+    }
+
+    .job-detail-title p {
+        font-size: 13px;
+    }
+
+    .job-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .meta-box {
+        padding: 10px;
+    }
+
+    /* Post Job */
+    .post-job-container {
+        padding: 15px;
+    }
+
+    fieldset {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .form-actions {
+        gap: 8px;
+    }
+
+    .form-actions button,
+    .form-actions a {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    /* My Jobs/Applications */
+    .job-management-card {
+        padding: 12px;
+    }
+
+    .job-management-stats {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .stat-value {
+        font-size: 18px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    .application-card {
+        gap: 10px;
+    }
+
+    .app-company-logo img,
+    .logo-placeholder {
+        width: 50px;
+        height: 50px;
+    }
+
+    .applicant-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Profile */
+    .profile-header {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-details h1 {
+        font-size: 18px;
+    }
+
+    .profile-email,
+    .profile-phone,
+    .profile-location,
+    .profile-type {
+        font-size: 12px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 12px;
+    }
+
+    .stat-number {
+        font-size: 22px;
+    }
+
+    /* Admin Dashboard */
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 12px;
+    }
+
+    .stat-icon {
+        font-size: 24px;
+    }
+
+    .admin-links {
+        gap: 8px;
+    }
+
+    .admin-links .btn {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    /* Admin Table - Responsive Layout */
+    .admin-table {
+        font-size: 11px;
+        width: 100%;
+    }
+
+    .admin-table thead {
+        display: none;
+    }
+
+    .admin-table tbody {
+        display: block;
+    }
+
+    .admin-table tr {
+        display: block;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 12px;
+        overflow: hidden;
+    }
+
+    .admin-table td {
+        display: block;
+        text-align: right;
+        padding-left: 40%;
+        position: relative;
+        padding: 8px;
+        border-bottom: 1px solid #eee;
+        word-wrap: break-word;
+    }
+
+    .admin-table td:last-child {
+        border-bottom: none;
+    }
+
+    .admin-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        top: 8px;
+        font-weight: bold;
+        text-align: left;
+        width: 35%;
+        font-size: 10px;
+    }
+
+    .admin-table .btn {
+        display: inline-block;
+        width: auto;
+        padding: 5px 8px;
+        font-size: 10px;
+        margin-right: 3px;
+        margin-bottom: 3px;
+    }
+
+    /* Pagination */
+    .pagination {
+        gap: 4px;
+    }
+
+    .pagination .btn {
+        min-width: 30px;
+        padding: 5px 6px;
+        font-size: 11px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 30px 0 15px;
+    }
+
+    .footer-section h4 {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        padding-top: 15px;
+        font-size: 11px;
+    }
+
+    /* Alerts */
+    .alert {
+        padding: 10px 12px;
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    /* No Results */
+    .no-results {
+        padding: 20px 15px;
+    }
+
+    .no-results p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    /* Contact Page */
+    .about-hero,
+    .contact-page > h1 {
+        font-size: 20px;
+    }
+
+    .contact-info-box {
+        padding: 12px;
+    }
+
+    .contact-info-box h4 {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .contact-info-box p {
+        font-size: 12px;
+        margin: 5px 0;
+    }
+
+    /* Skills List */
+    .skills-list {
+        gap: 8px;
+    }
+
+    .skill-tag {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    /* Search Form */
+    .search-form {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .search-form input,
+    .search-form button {
+        font-size: 13px;
+        width: 100%;
+    }
+
+    /* Filter Form */
+    .filter-form {
+        gap: 10px;
+    }
+
+    .filter-form input,
+    .filter-form select {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    /* Applications Management */
+    .application-item {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .applicant-info {
+        gap: 10px;
+    }
+
+    .applicant-details h4 {
+        font-size: 13px;
+    }
+
+    .applicant-details p {
+        font-size: 11px;
+    }
+
+    .application-meta {
+        gap: 8px;
+    }
+
+    .status-select {
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+    .application-actions {
+        gap: 8px;
+    }
+
+    .application-actions .btn {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    /* Radio & Checkbox */
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .radio-label {
+        font-size: 13px;
+    }
+
+    /* Textarea */
+    .form-group textarea {
+        min-height: 70px;
+    }
+
+    /* Badge */
+    .badge {
+        padding: 3px 6px;
+        font-size: 11px;
+    }
+
+    /* Utility */
+    .text-center {
+        text-align: center;
+    }
+
+    small {
+        font-size: 11px !important;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
+
+/* ========== EXTRA SMALL PHONES (320px and below) ========== */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 8px;
+    }
+
+    .btn {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+
+    .hero-content h1 {
+        font-size: 18px;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+    }
+
+    .job-card {
+        padding: 10px;
+    }
+
+    .job-card h3 {
+        font-size: 13px;
+    }
+
+    .auth-box {
+        padding: 15px;
+    }
+
+    .job-detail-title h1 {
+        font-size: 18px;
+    }
+
+    .admin-table td {
+        padding-left: 35%;
+        padding: 6px;
+        font-size: 10px;
+    }
+
+    .admin-table td:before {
+        width: 30%;
+        font-size: 9px;
+    }
+
+    .pagination .btn {
+        min-width: 28px;
+        padding: 4px 5px;
+        font-size: 10px;
+    }
+
+    .alert {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .tag {
+        padding: 2px 5px;
+        font-size: 9px;
+    }
+}
+
+/* ========== PRINT MEDIA ========== */
+@media print {
+    .navbar,
+    .footer,
+    .btn,
+    .pagination,
+    .filter-buttons,
+    .admin-links {
+        display: none;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .job-card,
+    .application-card,
+    .profile-header {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* ========== LANDSCAPE MODE (Height-based) ========== */
+@media (max-height: 600px) and (orientation: landscape) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .hero-section {
+        padding: 20px;
+        margin: 10px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .job-card {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .nav-menu {
+        gap: 10px;
+    }
+}
+
+/* ========== HIGH RESOLUTION DISPLAYS ========== */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero-section {
+        padding: 100px 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+}
+
+/* ========== REDUCED MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ========== DARK MODE SUPPORT (Optional) ========== */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+
+    .job-card,
+    .auth-box,
+    .application-card,
+    .profile-header {
+        background-color: #2a2a2a;
+        color: #e0e0e0;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        background-color: #333;
+        color: #e0e0e0;
+        border-color: #444;
+    }
+
+    .admin-table {
+        background-color: #2a2a2a;
+        color: #e0e0e0;
+    }
+
+    .admin-table th {
+        background-color: #1a1a1a;
+    }
+
+    .admin-table td {
+        border-bottom-color: #444;
+    }
+}
+
+/* ========== ORIENTATION FIXES ========== */
+@media (orientation: portrait) {
+    .jobs-section {
+        grid-template-columns: 1fr;
+    }
+
+    .job-detail-container {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (orientation: landscape) {
+    .jobs-section {
+        grid-template-columns: 250px 1fr;
+    }
+
+    .job-detail-container {
+        grid-template-columns: 1fr 350px;
+    }
+}
